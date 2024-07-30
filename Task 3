@@ -1,0 +1,41 @@
+//NUMBER GUESSING GAME C++
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int mynum,usnum, attempts;
+    
+    mynum=30;
+    
+    cout<<"\t<<<<<< WELCOME TO THE NUMBER GUESSING GAME >>>>>>"<<endl;
+    cout<<"\nI Guessed The Number Between 1 To 50"<<endl;
+    cout<<"\nNow You Find The Guessed Number"<<endl;
+    
+    for(attempts=1; attempts<=5; attempts++)
+    {
+        cout<<"\nEnter The Number: ";
+        cin>>usnum;
+        
+        if(usnum>=50)
+        {
+            cout<<"\nGive The Number Below 50\n";
+        }
+        
+        else if(usnum>mynum)
+        {
+            cout<<"\n!!! Too High !!!";
+        }
+        
+        else if(usnum<mynum)
+        {
+            cout<<"\n!!! Too Low !!!";
+        }
+        
+        else if(mynum == usnum)
+        {
+            cout<<"\nWow ! You Find The Number : 30 : CONGRATULATIONS";
+            break;
+        }
+    }
+}
