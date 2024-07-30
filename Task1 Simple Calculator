@@ -1,0 +1,56 @@
+//Simple Calculator C++
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    char operation;
+    int num1, num2, ans;
+
+    cout << "Enter The Number 1: ";
+    cin >> num1;
+
+    cout << "Enter The Number 2: ";
+    cin >> num2;
+
+    cout << "Enter Operation ( +,-,*,/ ): ";
+    cin >> operation;
+
+    switch (operation) 
+{
+        case '+':
+            ans = num1 + num2;
+            cout << "\n" << num1 << " + " << num2 << " = " << ans;
+            break;
+
+        case '-':
+            ans = num1 - num2;
+            cout << "\n" << num1 << " - " << num2 << " = " << ans;
+            break;
+
+        case '*':
+            ans = num1 * num2;
+            cout << "\n" << num1 << " * " << num2 << " = " << ans;
+            break;
+
+        case '/':
+            if (num2 != 0) 
+           {
+                ans = num1 / num2;
+                cout << "\n" << num1 << " / " << num2 << " = " << ans;
+            } 
+            else 
+           {
+
+                cout << "\nError! Division by zero.";
+            }
+            break;
+
+        default:
+            cout << "Error! Invalid operation.";
+            break;
+   }
+
+    return 0;
+}
